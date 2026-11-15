@@ -15,7 +15,7 @@ status=1;
 break;
 }
 }
-if(status=1)
+if(status==1)
 printf("Element found at %d",i+1);
 else
 printf("Element not found");
