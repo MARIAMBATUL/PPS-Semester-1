@@ -1,0 +1,48 @@
+#include<stdio.h>
+void main()
+{
+int A[3][3],sp[10][3],i,j,k=0,z=0,nz=0;
+printf("enter 9 elements for matrix A\n");
+for(i=0;i<3;i++)
+{
+for(j=0;j<3;j++)
+{
+scanf("%d",&A[i][j]);
+if(A[i][j]==0)
+z++;
+else
+nz++;
+}
+}
+printf("\n A is=\n");
+for(i=0;i<3;i++)
+{
+for(j=0;j<3;j++)
+printf("%d",A[i][j]);
+printf("\n");
+}
+if(z>nz)
+printf("sparse matrix");
+else
+printf("not sparse matrix");
+for(i=0;i<3;i++)
+{
+for(j=0;j<3;j++)
+{
+if(A[i][j]!=0)
+{
+sp[k][0]=i;
+sp[k][1]=j;
+sp[k][2]=A[i][j];
+k++;
+}
+}
+}
+printf("\n sparse matrix is=\n");
+for(i=0;i<nz;i++)
+{
+for(j=0;j<3;j++)
+printf("%d",sp[i][j]);
+printf("\n");
+}
+}
